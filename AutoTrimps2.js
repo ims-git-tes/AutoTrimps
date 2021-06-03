@@ -1,4 +1,4 @@
-var ATversion='Zek v4.5.0',atscript=document.getElementById('AutoTrimps-script'),basepath='https://Zims-git-tes.github.io/AutoTrimps/',modulepath='modules/';null!==atscript&&(basepath=atscript.src.replace(/AutoTrimps2\.js$/,''));
+var ATversion='Zek v4.5.0',atscript=document.getElementById('AutoTrimps-script'),basepath='https://ims-git-tes.github.io/AutoTrimps/',modulepath='modules/';null!==atscript&&(basepath=atscript.src.replace(/AutoTrimps2\.js$/,''));
 function ATscriptLoad(a,b){null==b&&debug('Wrong Syntax. Script could not be loaded. Try ATscriptLoad(modulepath, \'example.js\'); ');var c=document.createElement('script');null==a&&(a=''),c.src=basepath+a+b+'.js',c.id=b+'_MODULE',document.head.appendChild(c)}
 function ATscriptUnload(a){var b=document.getElementById(a+"_MODULE");b&&(document.head.removeChild(b),debug("Removing "+a+"_MODULE","other"))}
 ATscriptLoad(modulepath, 'utils');
@@ -15,6 +15,7 @@ function initializeAutoTrimps() {
 }
 
 var changelogList = [];
+changelogList.push({date: "03/06/2021", version: "v4.5.0.test", description: "test" ,isnew :true });
 changelogList.push({date: "15/05/2021", version: "v4.5.0", description: "<b>v5.5.0</b> Seperated Tribute and Time farm. Added automation for Pandemonium\, Alchemy and Spire Assault. Updated calcs. Added an option to calc frenzy. Credits to August for adding Staff swap and fixing a few bugs. ", isNew: true});
 changelogList.push({date: "15/09/2020", version: "v4.4.1", description: "<b>v5.4.1</b> Fixed things. Check your TF settings U2 people i added a toggle", isNew: false});
 changelogList.push({date: "06/09/2020", version: "v4.4.0", description: "<b>v5.4.0</b> There is not enough space to describe how much stuff has changed. But its got all 5.4 content ready. <b>CHANGED THE WAY JOBS\, GEAR\, BUILDINGS WORKS! CHECK SETTINGS!</b> ", isNew: false});
