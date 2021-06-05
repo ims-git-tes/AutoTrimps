@@ -451,7 +451,7 @@ function autoMap() {
                 if (!runningC2) {
                     if (theMap.name == 'The Prison' && (game.global.challengeActive == "Electricity" || game.global.challengeActive == "Mapocalypse")) {
                         var theMapDifficulty = Math.ceil(theMap.difficulty / 2);
-                        if (game.global.world < 80 + theMapDifficulty) continue;
+                        if (game.global.world < 80) continue;
                         selectedMap = theMap.id;
                         break;
                     }
