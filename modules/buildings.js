@@ -205,7 +205,7 @@ function buyBuildings() {
 	var gcNurse = getBuildingItemPrice(game.buildings.Nursery, "gems", false, 1);
 	var gcWarp = getBuildingItemPrice(game.buildings.Warpstation, "gems", false, 1);
 	
-    if (game.buildings.Nursery.locked == 0 && gcNurse<(0.1*gcWarp) && (!hidebuild &&( game.global.world >= getPageSetting('NoNurseriesUntil') || getPageSetting('NoNurseriesUntil') < 1) && (getPageSetting('MaxNursery') > game.buildings.Nursery.owned || getPageSetting('MaxNursery') == -1)) || (game.global.challengeActive != "Daily" && getPageSetting('PreSpireNurseries') > game.buildings.Nursery.owned && isActiveSpireAT()) || (game.global.challengeActive == "Daily" && getPageSetting('dPreSpireNurseries') > game.buildings.Nursery.owned && disActiveSpireAT())) {
+    if (game.buildings.Nursery.locked == 0 && (gcNurse<(0.1*gcWarp) || game.global.world > 150)  && (!hidebuild &&( game.global.world >= getPageSetting('NoNurseriesUntil') || getPageSetting('NoNurseriesUntil') < 1) && (getPageSetting('MaxNursery') > game.buildings.Nursery.owned || getPageSetting('MaxNursery') == -1)) || (game.global.challengeActive != "Daily" && getPageSetting('PreSpireNurseries') > game.buildings.Nursery.owned && isActiveSpireAT()) || (game.global.challengeActive == "Daily" && getPageSetting('dPreSpireNurseries') > game.buildings.Nursery.owned && disActiveSpireAT())) {
 	safeBuyBuilding('Nursery');
     }
 
